@@ -18,6 +18,7 @@
 \usepackage{xparse}
 \usepackage{needspace}
 \usepackage{xspace}
+\usepackage{subcaption}
 \usepackage{mathpartir}
 \usepackage{tikz}
 \usetikzlibrary{arrows}
@@ -30,6 +31,7 @@
 \usepackage[nottoc]{tocbibind}
 \usepackage{caption}
 \usepackage{coqtheorem}
+\usepackage{booktabs}
 %\usepackage[colorlinks=true, linkcolor=blue, breaklinks, draft=false, pdfusetitle]{hyperref}
 
 
@@ -76,7 +78,7 @@
 \newcommand{\setauthor}[1]{\author{#1}\def\theauthor{#1}}
 \newcommand{\settitle}[1]{\title{#1}\def\thetitle{#1}}
 
-\newcommand{\advisor}[1]{\def\theadvisor{#1}}
+\newcommand{\supervisors}[1]{\def\thesupervisors{#1}}
 \newcommand{\reviewerOne}[1]{\def\thereviewerOne{#1}}
 \newcommand{\reviewerTwo}[1]{\def\thereviewerTwo{#1}}
 \newcommand{\university}[1]{\def\theuniversity{#1}}
@@ -116,8 +118,8 @@
       \end{minipage}%
       \begin{minipage}{0.4\textwidth}
         \begin{flushright} \Large
-          \emph{Advisor} \\
-          \theadvisor
+          \emph{Supervisors} \\
+          \thesupervisors
 
         \end{flushright}
       \end{minipage}
@@ -134,7 +136,7 @@
 
       \vfill
 
-      {\large Submitted: \thesubday\textsuperscript{th} \thesubmonth~\thesubyear}
+      {\large Submitted: \thesubday\thesubmonth~\thesubyear}
 
     \end{center}
   \end{titlepage}
@@ -173,7 +175,7 @@ Computer Science Department.
 
 \vspace*{3cm}
 
-\thecity, \thesubday$^{\text{th}}$ \thesubmonth, \thesubyear
+\thecity, \thesubday \thesubmonth \thesubyear
 
 \newpage
 }

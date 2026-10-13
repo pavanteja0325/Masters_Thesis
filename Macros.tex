@@ -15,6 +15,10 @@
 \newcommand{\bnfor}{~|~} %|
 \newcommand{\qedsq}{\hfill\ensuremath{_\blacksquare}}
 
+\newcounter{rq}
+\renewcommand{\therq}{RQ\arabic{rq}}
+\newcommand{\RQ}[1]{\refstepcounter{rq}\noindent\textbf{\therq:} #1}
+
 \newcommand{\blankpage}{\newpage
 \thispagestyle{empty}
 \mbox{}
