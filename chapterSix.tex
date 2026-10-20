@@ -1,24 +1,185 @@
-\chapter{Limitations and Future Work}
+\chapter{Discussion} \label{chapter:discussion}
 
-This chapter discusses the limitations of the current research which stem from the various methodological decisions taken as part of the research process in Section \ref{sec: limitations}. Additionally, the plausible research pathways that can be explored in the future are discussed as part of Section \ref{sec: future work}.
+Building upon the empirical findings from Chapters \ref{chapter: Quant Analysis&Results} and \ref{chapter: qual analysis&results}, this chapter interprets them in relation to the two research questions guiding this research. Where quantitative findings establish baseline patterns such as sensitivity ratings and control perceptions within this sampled population, qualitative data provides explanatory depth on user rationales underlying these patterns. 
 
-\section{Limitations} \label{sec: limitations}
+Section \ref{sec:sensitivities of PD} addresses \ref{rq:1}, examining how sensitivity hierarchies of their personal data correspond to user articulation of limited autonomy and subsequent fears of misuse. Sections \ref{sec:companies distrust} and \ref{Sec: legal discussion} together answer \ref{rq:2}. Section \ref{sec:companies distrust} explores how measures of perceived control over data processing practices intersects with conditional trust on the companies, corporate opacity, and dark patterns used to maximize profits. Section \ref{Sec: legal discussion} then examines governance shortcomings rooted in users' lack of legal awareness, procedural hurdles, weak enforcement, and expectations for stricter regulations. Additionally, the discussion about the perspectives surrounding the DPDPA are present in Section \ref{DPDPA discussion}. Together these discourses of helplessness brought forth by organizational distrust and regulatory gaps explore the social construct of Digital Resignation \cite{draper_corporate_2019} in the Indian context in Section \ref{sec: resignation}.
 
-As discussed in \ref{Subsec: recruiting}, using an English-only instrument and snowball sampling meant that the sample was made up of English-speaking, largely urban, educated and relatively young users. While they would be the first to see the after-effects of a digital personal data privacy based legislation like DPDPA, it meant that the opinions of the under-represented minorities could not be understood. This study is explicitly posited as an exploratory, non-representative work, non-generalizable work. The vast linguistic differences present in India could therefore not be captured as well. For these reasons, all the results discussed throughout this study must be taken with respect to only this specific sample. Telangana also accounts for 33\% of the users in the sample, possibly skewing the results of the overall sampled population. However, robustness checks were computed by excluding these users and no significant differences in results were observed meaning that the larger population from a singular state was not influencing the overall results of the sample. Robustness results can be found in the Appendix \ref{appendix}.
+Notably, the qualitative findings go beyond the demographic boundaries showcased by quantitative analyses, suggesting that concerns around data sensitivity and processing control reflect shared structural experiences across this sampled population. 
 
-Previous literature which use the IUIPC instrument to measure the general privacy concerns of users report high mean values or ceiling effect being present \cite{gros_validity_2021, malhotra_internet_2004, 10.1145/3380960, 10.1145/3706598.3713912}. This was also noted in the pilot study that was conducted \ref{subsec: pilot analysis}. To account for this, the third item in the awareness sub-scale was reverse-worded, to ensure respondent's attention was accurate and not primed towards the higher scores. Unfortunately, this could not be achieved, and in turn also revealed the inattentiveness of some respondents while answering this specific section, which resulted in the bi-modal response distribution for the reverse-keyed item \ref{fig:IUIPC Frequency}. Additionally, the observed ceiling effect on some of the personal data items \ref{fig:Frequency sensitivity} weakened the correlations, potentially inflating the null demographic effect results. 
+\section{Layered Sensitivity, Limited Agency} \label{sec:sensitivities of PD}
 
-The homogeneous sample skewing slightly towards male, technical users meant that the isolated effects of each demographic could not be properly observed. The null result in both the Mann-Whitney U test and the regression models, therefore must be considered with this caveat in mind.
+Prior works \cite{priyadarsini_web_2025, kumaraguru_privacy_2012, danezis_privacy_2006} showed that users in the Indian ecosystem valued some of their personal data items to be more sensitive and hence were more skeptical about sharing them publicly. However, these works were primarily conducted before the enforcement of DPDPA, which explicitly defined the boundaries of what constitutes as personal data. Unlike the GDPR which explicitly categorizes sensitive personal data \footnote{https://gdpr-info.eu/issues/personal-data/} and states that it needs to be processed in a more vigilant manner \footnote{https://gdpr-info.eu/recitals/no-53/}, the Indian law does not have any such exemptions. The users in this sample disagree with this notion of uniform treatment, as seen with their sensitivity ratings of the different data items in the figure \ref{fig:Frequency sensitivity}. Furthermore, as in Section \ref{sec: PD analysis}, the users also clustered their sensitivity perspectives with the Medical, Identity and Contact groups being rated as the most private whereas there was considerable variance towards the sensitivity perceptions of demographic data. The effects of such clustering was also visible as part of the qualitative analysis where some respondents pointed out that certain data items which identifies them or are related to their families shouldn't be shared with others:
 
-Additionally, using self-reported data obtained from the Likert scales means the possibility of recollection bias from the respondents. Though this survey was not incentivized, which reduces inattentive responses for monetary benefits, an attention check question added into the personal data items helped weed out 40 responses who failed the said check \ref{subsec: refinements}. Moreover, the quality and depth obtained from the approximately 100 open-text answers for each of the 6 questions showcase user interest in engaging with this conversation. Unfortunately, these open-text questions cannot be a replacement for actual qualitative study in terms of richness and hence the data from the said questions only offer comparatively limited insights.
+\begin{quote}
+   \textit{``Information that can be used to identify a person and/or data that one does not wish to disclose to others'' }
+\end{quote}
 
-Finally, the DPDPA itself is a relatively new framework under partial enforcement at the time of the survey. While this novelty helps with capturing the raw insights from the participants, it also means that the awareness figures must only be considered as a snapshot situated in the current setting \ref{tab:dpdpa-awareness}. Coupled with the political unrest in the country which was discussed in \ref{DPDPA discussion}, situational priming of the users towards institutional distrust cannot be ruled out.
+As seen in Section \ref{subsub:demo effects}, the null demographic effect on the clustering and its sensitivities meant that, across the sample, users were not differing in their opinions based on their gender or their profession. While a minority echoed that they choose to share their data and have control over its processing, especially when it helps them in viewing personalized content, majority expressed that excessive data was being collected from them and without any autonomy from their end as visible in the themes \ref{T1:personal data} and \ref{T2: Lack of agency}.
 
+\begin{quote}
+    \textit{``The search engine and browser is already collecting my information and records while I use internet. Again the website also collect email accounts to log-in''}
+\end{quote}
 
-\section{Future work} \label{sec: future work} 
+Multiple users also mentioned about the data processing being confusing and difficult to understand which required them to use external help to resolve issues. They discussed these factors of complicated processes further alienating them, increasing their helplessness against the companies. 
 
-This study primarily focuses on respondents living in India, since they are the main focus of the Act and our study. However, DPDPA is also applicable based on where the data is processed, not just who the person is. So, Non-resident Indians (NRIs) and Overseas Citizens of India (OCIs) when using Indian services can use its rights (access, correction, erasure, grievance redressal). Their views on privacy may still be shaped by the laws of the countries they currently live in, such as the GDPR and CCPA. 
+\begin{quote}
+    \textit{``I dont really know how the data is being processed and purposes it is being used for. Even if the website does say they are using it ethically, there is a general sense of distrust. Even if they do misuse it, it is unlikely I would find out about it or I can do anything about it.''}
+\end{quote}
 
-Snowball sampling meant that responses from some users who currently do not reside in the country were also collected(n=39). For description only, their perceptions on their privacy-sensitivities of the various data items (See figure \ref{fig:Sensitivity MWU}) and perceived control  over its processing (See figure \ref{fig:Perceived control MWU}) were compared with respondents living in India. \textit{Passport details} (p\_holm = 0.026, r = 0.20) and \textit{Medical records and history} (p\_holm = 0.014, r = 0.21) achieve statistical significance with small effect, as does \textit{perceived control} (p = 0.012, r = 0.16). This means NRI respondents rated some data items as more sensitive but felt less control over how their data is processed. The sample is small, so these results are descriptive only. Future work should use a larger sample and also consider years since migration, local laws, and changing views. This is worth exploring, given the recent shift in data privacy \cite{edpb2024opinion} and transparency \cite{eu2024aiact} debates with respect to LLM training in the Global North.    
+This intersection of high sensitivity and low autonomy over their personal data fed directly into their concerns about being digitally profiled in forms of non-consensual data sharing or selling it to third parties. Importantly, it is key to understand that these emotions stem from a place of considering personal data to be something which describes them uniquely and can only be generated by them. These fears however, were not abstract but stemmed rather from personal experiences that they faced, aggravating this feeling of perennial data misuse. Numerous personal accounts were shared about how their digital profiles were used for advertising and in some cases even giving the feeling of `being watched`.
 
-Additionally, as discussed in Section \ref{sec: resignation}, this sample showcased Digital Resignation in their perspectives regarding their personal data, which primarily stemmed from the distrust in the corporations and legal hurdles. Future works can potentially run studies to explicitly understand this phenomenon and how it is showcased in the Global South contexts with even larger samples. Moreover, using validated scales for attitudes like Privacy Cynicism \cite{hoffmann_privacy_2016, lutz_data_2020} can help in understanding how this interconnectedness of corporate motives and legal barriers might influence user behavior in the Global South.  
+\begin{quote}
+    \textit{``I don't think companies tell the user on how they extract information on them because Whenever I make a payment I start to get loan offers and other finance related stuff, how do they know I am buying a product or a service My gmail id is extensively used (or rather exploited) by companies''}
+\end{quote}
+\begin{quote}
+    \textit{``I dont trust banks with what they do with our money and data is far less regulated''}
+\end{quote}
+
+This lack of control over user data also stems from the excessive presence of \textit{AI} and how companies do not take their consent to train their models. Users state that such non-consensual training processes are often un-regulated in the current environment, ensuring zero accountability and real-world impact.
+
+\begin{quote}
+    \textit{``AI is mining the internet for our personal data, often without our consent, for advertising and shaping our political discourse.''}
+\end{quote}
+
+Together, these findings suggest that in this sample of Indian internet users, personal data operates as a layered understanding: Mental models of what can be constituted as their personal data; its privacy sensitivity clustering based on their daily usage; their perceived lack of autonomy to make choices and the potential fears over downstream consequences. These nuances pave the way to understand how the companies further misuse their command over this chain of processing. 
+
+\section{Opacity by Design} \label{sec:companies distrust} 
+ 
+Conditionality becomes the core reasoning behind the users' beliefs against the consent withdrawal and data deletion processes. Depending on the situational context of type of data, type of organization or even the knowledge of the user themselves, their beliefs on implementation and awareness about these processes vary drastically, which is also evident by the figure \ref{fig:Perceived_control_distribution}.
+
+\begin{quote}
+  \textit{``Well, i somewhat believe that those big corporate do not miss use my data''}
+\end{quote}
+\begin{quote}
+    \textit{``I don't want my personal imgormTion shared on all platforms, except govt. Organisations and banks that too whatever is relevant. I don't want all platforms to know my travel details, my date of birth etc. They will try to harrass me, dupe me, create some fake images of me and possibly frame me as well.''}
+\end{quote}
+
+Many users agree that these processes must be easier to perform and they should be provided with more information to help them do so, which can also be observed by the low mean value of Control items 3 and 4 in the table \ref{tab:perceived_control_descriptive}. However, a small set of respondents mention that they consider the process of consent withdrawal to be pretty easy and quick, especially since they know that some automatic tools exist which help them complete it 
+\begin{quote}
+    \textit{``In the past, I have requested my personal data to be deleted with my account when I no longer use the service (ex: food delivery apps, job application sites). The process gas been quick and simple.''}
+\end{quote}
+\begin{quote}
+    \textit{``There are paid apps which do it easily, but again not gonna unless absolutely needed''}
+\end{quote}
+
+Most of the users mention that they know they can request deletion of their data from the companies (See Control item 2 in the table \ref{tab:perceived_control_descriptive}) but because the process isn't transparent enough, they are not sure about the actual deletion taking place. They theorize that since the data has been uploaded into the cloud or their databases, it physically cannot be deleted anymore. They equate non-compliance for such  deletion requests with that of an illusion of deletion.
+
+\begin{quote}
+    \textit{``It doesn’t even exist. A UI would say data is wiped but cloud says otherwise''}
+\end{quote}
+
+Some users however, mention that they make decisions in an informed manner on their own, trusting the process laid out by the companies since they are informed clearly and concisely using privacy policies. It is important to note that even these users are conditionally skeptical with their trust.
+
+\begin{quote}
+    \textit{``I believe most reputable websites and applications provide privacy notices, consent requests, or terms and conditions explaining how my personal data will be collected and processed. I make an effort to review these notices, especially when sharing sensitive information, although I understand that the level of detail and transparency may vary between organizations.''}
+\end{quote}
+
+This conditional trust on the companies is echoed by a majority of the participants, talking about consent withdrawal and data deletion processes being dependent on the type of requests being made as well as the companies in question. The distrust stems from the fact that users believe that the companies do not really provide them with complete information with respect to their consent withdrawal mechanism or even provide them with clear, concise information policies. They speak of various dark patterns used by the companies which ensure that the users do not read the documentation properly. Additionally, the users claim that while providing consent is usually straightforward in nature, the revocation procedure is hidden behind multiple steps making it rather time-consuming for the user. 
+
+\begin{quote}
+    \textit{``Manytimes ni such information is provided and even when provided, it is his behind complicated clauses''}
+\end{quote}
+\begin{quote}
+    \textit{``As there is nothing specific mentioned anywhere in the website to withdraw the personal details provided.''}
+\end{quote}
+\begin{quote}
+   \textit{``Signup is often one click but try deleteing any account and count your number of clicks''}
+\end{quote}
+
+On the whole, these findings indicate that there is only partial perceived control the users have over the processing of their personal data, especially with the consent withdrawal and data deletion processes. Broadly, most users are in disagreement about them being provided with sufficient information by the companies, who employ various dark patterns and opaque practices to trick the users. This results in effectively shifting the burden of privacy from corporations to individuals.
+
+\section{Rights on Paper} \label{Sec: legal discussion} 
+
+Corporate ecosystem when given a free rein often prioritizes monetary gains over user autonomy. It is up to the legislation to therefore regulate such companies, ensuring this imbalance doesn't get amplified. Many users agree that the companies lack a sense of accountability towards any organization monitoring them. They say that while compliance is stated for the sake of it, actual enforcement is evaded by influence peddling, thereby ensuring that the companies continue to rake in the profits. 
+
+\begin{quote}
+   \textit{ ``I don't trust companies/organizations. Anything in India can be bought if you have enough money, including the "permission" to break laws.''}
+\end{quote}
+\begin{quote}
+    \textit{``A lot of Indian account data was used in the past, and used for the benefit of the big corporate house''}
+\end{quote}
+
+User awareness about their legal provisions and rights is of equal importance to counter privacy imbalance. Many respondents in this sample have explicitly mentioned that on most occasions they do not know what their rights are or are even aware that such laws protecting their data privacy exists. Those who do know of such laws, have the consensus that their effectiveness is conditional, not just in terms of the land of its operation but also the companies who are being regulated. They argue that while laws in EU (GDPR) are stricter in their enforcement, such procedures are not feasible in India for multitude of reasons like corruption and limited scope. This skepticism which was also seen in the low mean score of control item 6 in table \ref{tab:perceived_control_descriptive} falls in line with their conditional trust on the companies in terms of their implementation and provision of valid proofs, as discussed in section \ref{sec:companies distrust}.
+
+\begin{quote}
+    \textit{``India - No. Europe - somewhat yes''}
+\end{quote}    
+\begin{quote}
+    \textit{``I somewhat disagree because, although many companies claim to follow data protection laws, I am not always confident that they fully comply with them in practice. News reports about data breaches, privacy concerns, and the misuse of personal information by large technology companies have made me more cautious. While some organizations likely take these laws seriously, I believe others may focus more on appearing compliant than on consistently protecting users’ personal data.''}
+\end{quote}
+
+Some of the users do acknowledge that enforcement is possible and believe that the laws are framed with the best interests of the public in mind. They emphasize that the DPDPA is quite new and given its recency, must be given some time before actually judging its efficiency. Athar et al. argue about laws lacking transparency, which is resonated by majority of the respondents \cite{athar2026}. They say that there's also a need for the laws to catch up with the current market standards. It is this transparency (or the lack thereof), which hinders them from following-up against the claims of the companies if they know that they can get justice. Many of the users mentioned that this process usually has a lot of hassles, right from gaining more awareness to actually exercising their rights and following up in judicial procedures. They believe that the end never approaches in such situations, wasting their means and time and often a circular process which cannot be afforded by a simple layperson. This echoes back to the previously discussed notes of helplessness against the companies in section \ref{sec:sensitivities of PD} but with additional legal context.
+
+\begin{quote}
+     \textit{``The laws are new and the enforcement mechanisms and rules are in nascent stages. It will take some time in effective enforcement of the laws by the companies.''}   
+\end{quote}     
+
+\begin{quote}
+     \textit{``I believe legislation still needs to catch up to the developments and practices of tech companies. Also, legal recourse for an average member of the public can be prohibitively expensive in a country where justice is not always delivered in a timely manner.''}
+\end{quote}
+
+\begin{quote}
+   \textit{``There may be law, however, so far no one has bren punished nor has people got back thier rights. In some cases it has cost people money, and name too.''}
+\end{quote}
+\begin{quote}
+    \textit{``Laws can be manipulative and comapnies with gaint money can bend them''}
+\end{quote}
+
+Though some users say that they fully believe in the system, especially in its ability to implement better standards, they are still hesitant in believing the compliance of the companies. This aspect of companies actually sneaking their way through compliance and the need for rigorous vigilance was repeatedly mentioned. This was also echoed in the final open-text question's responses in section \ref{Subsubsec: DPDPA}, where the participants called for \textit{better transparency, stronger safeguards, stricter enforcement and more importantly, a necessary change right from the grass-roots levels}. Following section discusses the participants perspectives on the potential and plausible effectiveness of the DPDPA and its possible impact on user data privacy.
+
+\subsection{New Law, Old Distrust} \label{DPDPA discussion} 
+
+Like it was mentioned in Section \ref{sec:DPDPA analysis}, the questions related to the DPDPA were included to understand the awareness of the law and subsequently, the opinions towards its effectiveness in terms of users' personal data privacy. Previous works \cite{athar2026, priyadarsini_web_2025} in  regarding user awareness on regulations in this contexts provide similar ranges to can be see in the Table \ref{tab:dpdpa-awareness}. This also aligns with the general lack of awareness about the legal procedures discussed in Section \ref{Sec: legal discussion}. Of those who claimed to be aware, majority only had partial understanding or even lacked any understanding about its usage. Only a select few (n=6) had a valid understanding, either because they were certified in the Act or had implemented it for their businesses.
+
+\begin{quote}
+   \textit{``Implementated it for my startup''}
+\end{quote}
+
+\begin{quote}
+    \textit{``Under dpdp act 2023 one can complain to data protection board of India if site owner company doesn't resolve ones problem,,,if the issue is hacking,identity theft,online fraud or unauthorised access to your account we need to complain to indian cyber crime portal''}
+\end{quote}
+
+Additionally, users claimed severe distrust in the corporative practices that are in place and alleged that the actual issue still resided at the company's end in terms of legal evasion and non-compliance. They also reasoned that the Act would work as a mask ensuring users have an illusion of control over their data.
+
+\begin{quote}
+    \textit{``im sure there are legal loop holes to the policies that companies put out and can be exploitated since the ACT is not tight enough''}
+\end{quote}
+
+\begin{quote}
+    \textit{``I think it somewhat gives us the illusion that we have the total control over who collects our data and how they use it, and forces companies to keep our information safe. And its companies responsibilty to give security so no unknown can follow this information or it gets leak or we get spam or what not then companies will pay money''}
+\end{quote}
+
+While few users were optimistic about the enforcement of the Act albeit conditionally, due to its simplicity, many state not trusting the Government due to bureaucratic hassles, neither with their data nor to ensure prompt enforcement. 
+
+\begin{quote}
+    \textit{``The act has to do more with govt accessing my data and less with me owning the data''}
+\end{quote}
+\begin{quote}
+    \textit{``If it is implemented and monitored properly only then but the way government and governing bodies are operating in India, there's no chance in hell it works.''}
+\end{quote}
+
+Such ambiguity and concern towards the effectiveness and more importantly enforcement, stems primarily from a lack of trust towards the corporations and the legal loopholes they are afforded. There is a deep-rooted mistrust between how the users believe their privacy needs to be maintained and handled, and how the companies disregard these thoughts in order to ensure their beneficial relevance within the current market. This leads to rapid erosion of user trust, eventually to the point where users completely forgo their privacy for the functioning of their daily lives, fully tipping the already imbalanced scale of privacy-convenience tradeoff. Although currently the difference is that, \textit{this is not being done out of choice but due to not having one to make}. This broader narrative of digital resignation, in concurrency with the state of the country is further explored in section \ref{sec: resignation}. 
+
+\section{Digital Resignation} \label{sec: resignation}
+
+As danah boyd notes, ``\textit{wanting privacy is not about needing something to hide. It's about wanting to maintain control}'' \cite{boyd2010making}. Throughout this discussion, multiple streams of opinions from the respondents converge to a singular concept – being forced into resignation over their personal data privacy. In this exploratory study, \ref{rq:1} answers about users expressing high sensitivity towards most of their personal data items, while \ref{rq:2} discusses how they have conditional levels of perceived control, primarily stemming from deep corporate distrust due to their misleading practices to deceive users. This discourse aligns with what Draper and Tudow theorize as Digital Resignation – \textit{``condition produced when people desire to control the information digital entities have about them but feel unable to do so.''}\cite{draper_corporate_2019}. They attribute this theory to be primarily stemming from a singular source of corporate cultivation, where corporations manufacture this feeling of resignation through opaque policies, dark patterns and deliberate complexities. This notion was also initially observed across established Western contexts as explored in Section \ref{subsec:regulatory impact}. 
+
+ Furthermore, as noted in Section \ref{sec:companies distrust}, opaque information policies ensure that the users are alienated from being aware of what's actually being collected from them, eliciting self-doubt in the users regarding their privacy knowledge. This self-doubt leads to feelings of individualism and sporadic communal responses, which are the ideal outcomes that the corporate tries to bring forth. This ensures collective protective action can be greatly reduced, thereby negating its effectiveness \cite{draper_corporate_2019}. Despite their high perception of privacy and sensitivity towards their data, respondents often stated their attempts to fight for their rights as futile, primarily because this would waste their own resources without any end result. The null demographic effect seen in Section \ref{subsub:demo effects}, means that this pattern holds across the demographics suggesting resignation is structural rather than a feature of any particular subgroup.
+
+\begin{quote}
+    \textit{``Enterprises hire skilled law firms to make sure they don't face any legal problems. It's almost impossible for me to fight a big company alone ''}
+\end{quote}
+
+More importantly, this sample also points to a secondary source for this feeling of resignation – weak regulatory landscape in the country. Users explain that despite the presence of laws, they're still skeptical about how helpful they can be due to past experiences, public knowledge, nascency of the laws and most importantly, inefficient enforcement mechanisms. Even in the case of DPDPA, users mention that while this law itself is new, they are still skeptical about the people who are in charge of enforcing it, due to the general belief that the system does not favor the layperson.
+
+\begin{quote}
+    \textit{``Indian cyber security feels suuuuuuuuuper shady. Especially given the current NEET exam leaks and my MacBook always telling me that my data got stolen from official government websites.''}
+\end{quote}
+
+While some of these concerns might have stemmed from the current political and situational climate \footnote{During the survey period, students in India staged their biggest ever protest against the dysfunctional and problematic educational issues related to national examinations and their lack of transparency, which lasted for more than 40 days. This ultimately resulted in the resignation of the Union minister for Education along with numerous alleged reforms to the system} in the country, this cannot negate the users' innate feeling of corporations being too powerful to challenge, in clumsy systems favoring the rich.
+
+\begin{quote}
+    \textit{``All this can work outside India for sure. For sure. But In India noting will work as long as there is corruption at every level of the governing bodies, from the Prime Minister to the peon''}
+\end{quote}
+
+Draper et al., calls for replicating this theoretical framework in more contexts (Global South specifically) and with users with under-represented identities in the society \cite{doi:10.1177/20539517241270663}. The multi-institutional effect on user agency over their privacy has been a focal point when discussing digital resignation and its knock-on effects on the socio-cultural aspects of privacy \cite{doi:10.1177/20539517241270663}. User agency is targeted at multiple fronts in a society that already treats individuality as an abstract concept when dealing with privacy \cite{srinivasan2018poverty, chakraborty_virtuous_2025, popuri_i_nodate}. Exploring perspectives in such an environment, while accounting for prevailing social norms, can help foster stringent legal enforcement practices and, more importantly, improve corporate accountability. This study only explores the social construct of Digital Resignation in the Indian context with a rather privileged sample, rather than choosing to test and validate it. These possible future outlooks are further discussed in Section \ref{sec: future work}. Nonetheless, this present discussion does bring forth an initial perspective into an atmosphere in which users are at their limit against corporate injustice and bleak legislative frameworks. 

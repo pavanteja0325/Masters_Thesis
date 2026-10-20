@@ -1,21 +1,25 @@
-\chapter{Analysis and Results} \label{chapter: Analysis&Results}
-This chapter first provides information about the analyses of the quantitative data and their subsequent results \ref{Sec: Quant analysis}, followed by reasoning of the type of analysis used for the open-text qualitative responses \ref{Sec: Qual Analysis}, their implementation and results to provide a concise and clear understanding of the processes. Additionally, the methods used to analyze the DPDPA related questions were discussed in \ref{sec:DPDPA analysis}.
+\chapter{Quantitative Analysis and Results} \label{chapter: Quant Analysis&Results}
+This chapter first provides information about the analyses of the quantitative data and their subsequent results, beginning with the examination of the adapted IUIPC scale in Section \ref{sec: IUIPC analysis}, followed by the various clusters of personal data items in Section \ref{sec: PD analysis}, and the perceived control of the users of their data processing in Section \ref{sec: Perceived control analysis}. Finally, the possible effects of various demographics on all of these analyses are examined in Section \ref{subsub:demo effects}. Additionally, the methods used to analyze the questions related to DPDPA have been discussed in Section \ref{sec:DPDPA analysis}.
 
-\section{Quantitative Analysis} \label{Sec: Quant analysis}
 
-As we have seen in chapter \ref{Sec:Privacy Notice}, the survey primarily consists of Likert-based questions, which were in the form of 5-point (Sensitivity scale and Agreement scale) or 7-point (Agreement scale) scales depending on the section in which they were used. Participant responses to these questions were initially checked for completeness and then coded to each scale's numeric equivalent values of 1-5 or 1-7 to ensure ease in calculations. Likert responses are considered to be ordinal in nature, due to the presence of ordered data but without any clear intervals between them which meant that non-parametric tests were to be used. To ensure demographics weren't overlapping with each other when comparing their effects on various results, cross-tabs were calculated and it was found that ~77\% of the respondents with Technical background were below the age of 35. For this reason only one of the two was considered while looking at their effects, as effect isolation would not be possible due to the very high overlap\footnote{While primary Regression analysis only considers Gender and Field of work as the indicators, Age was also considered as an indicator and the subsequent effects were calculated to ensure robustness. These Results can be found in the Appendix}. Age and Gender cross-tab was also checked, with \textit{Non-binary} and \textit{prefer not to say} options being omitted from further comparative effect analysis due to their low count. It was seen that there were only 64\% of the men were having technical backgrounds and the lower overlap meant that the effects could be looked at both as bivariates and individual indicators while isolating one another. Additionally, basic descriptive statistics like Mean\footnote{Mean was calculated just for showcasing the rough response split which was also visible using the frequency distribution table, and was not used for any further comparisons}, Median, Variance, Skew for each of the sections was calculated along with the frequency distributions for easier plotting of the distribution of the participants' responses.
+As seen in chapter \ref{Sec:Privacy Notice}, the survey primarily consists of Likert-based questions, which were in the form of 5-point (Sensitivity scale and Agreement scale) or 7-point (Agreement scale) scales depending on the section in which they were used. Participant responses to these questions were initially checked for completeness and then coded to each scale's numeric equivalent values of 1-5 or 1-7 to ensure ease in calculations \sa{ensure ease in calculations isn't a good reason, a citation for this practice is more logical}. Likert responses are considered to be ordinal in nature, due to the presence of ordered data but without any clear intervals between them which meant that non-parametric tests were to be used. Descriptive statistics including the median, variance and skew were computed for each section, along with frequency distributions. The median was used as the measure of central tendency given the ordinal nature of the responses, while variance and skew indicated the spread of agreement among participants and the direction in which responses clustered. The mean was reported only to indicate the rough response split and was not used for any further comparison. Frequency distributions were reported, since descriptive statistics alone can obscure polarized or bimodal response patterns. 
 
-\subsection{IUIPC Subscales} \label{Subsec: IUIPC analysis}
-The Internet Users' Information Privacy Concern scale was adapted (See \ref{Adapted_Survey}) to best suite the perspectives of the local demographics, ensuring that the scale retained its legibility despite the change in context. A high ceiling effect was found in the responses which can be seen in the frequency distribution table (See figure \ref{fig:IUIPC Frequency}).
+\section{IUIPC Subscales} \label{sec: IUIPC analysis}
+The Internet Users' Information Privacy Concern scale was adapted (See \ref{Adapted_Survey}) to best capture the perspectives of the Indian users as recommended by Malhotra et al. \cite{malhotra_internet_2004}. As noted in Section \ref{Subsec: IUIPC}, changes like rewording the statements were made in order to ensure that the scale retained its legibility despite the change in context. A high ceiling effect was found in the responses which can be seen in the frequency distribution table (See figure \ref{fig:IUIPC Frequency}).
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.9\linewidth]{Plots/IUIPC_frequency.png}
-    \caption{Frequency distribution of respondents for Section - 1}
+    \caption{Frequency distribution of respondents for Section - 1}\sa{The caption should briefly describe what the figure means as a reader wouldn't wanna go back to section 1 to see what it was about, esp regarding what the numbers and colors signify}
     \label{fig:IUIPC Frequency}
 \end{figure}  
 
-Since Pearson's correlation assumes normality and only looks for linear relationships, Spearman's correlations were calculated to check how the items actually correlated with items from the same and other sub-scales. The collection and control items correlated well within their own sub-scale and poorly with the others. However, awareness items showed weak correlation with each other, primarily due to some participants misreading the reverse-keyed statement. These correlations can be seen in \ref{fig:IUIPC correlations}. In order to calculate the internal consistency of each sub-scale , Cronbach's Alpha was calculated. In order to understand the complete picture of each sub-scale, their r.drop values, Feldt CI intervals and `reliability if an item is dropped' were also calculated. This sub-scale's $\alpha$ was 0.22 with broad Feldt Confidence Intervals at 0.04 - 0.37. Additionally, the r.drop value for Item 6 was 0.0024, and the $\alpha$ of the sub-scale shot back up to 0.777 if this item was removed. These values confirmed the poor correlation for the awareness sub-scale and ensured that it couldn't be used for further calculations. Since it is not recommended to have scales with only two items in it, the decision to further not consider this sub-scale was made. Control and Collection sub-scales had good $\alpha$ values of 0.76 and 0.77 respectively. Alpha statistics for all the three sub-scales are available in the Appendix. \ref{control_IUIPC} \ref{collection_IUIPC} \ref{awareness_IUIPC}  
+Since Pearson's correlation \cite{pearson1895note} assumes normality and only looks for linear relationships, Spearman's correlations \cite{spearman1904} were used given the ordinal nature of the responses. As the IUIPC was rephrased, item groupings could be assumed to hold; correlations of each item with items from its own and other sub-groups were therefore examined to verify that items grouped as intended. The Collection and Control items correlated well within their own sub-scales and weakly with the others. This convergent-discriminant pattern indicates that the two sub-scales captured distinct and internally coherent constructs, supporting their use as separate sub-scales. In contrast, the Awareness items correlated weakly with each other, plausibly because some participants misread the reverse-keyed statement. As these participants passed the attention check and provided sufficient open-text responses, inattentive responding was ruled out. These item to item correlations can be seen in the Figure \ref{fig:IUIPC correlations}.
+
+Internal consistency of each sub-scale was assessed using Cronbach's $\alpha$ \cite{cronbach1951coefficient}. As $\alpha$ is considered as a single aggregate estimate, it indicates neither the precision of such estimate nor which values weaken it. So, 95\% confidence intervals were computed using Feldt's method \cite{feldt1987statistical} alongside corrected item-total correlations (r.drop) and alpha-if-item-dropped values \cite{nunnally1994}, which show how strongly each item relates to the remainder of the sub-scales and whether its removal would improve consistency respectively. All reliability statistics were computed using the \texttt{alpha()} function in the \texttt{psych} package in R \cite{revelle2026psych}.
+
+The Awareness sub-scale returned an $\alpha$ of 0.22 with wide Feldt confidence intervals at 0.04 - 0.37. Additionally, the r.drop value for Item 6 in this sub-scale was 0.0024, and removing it raised the sub-scale's $\alpha$ to 0.777. These values confirmed that the item was not measuring the same construct as the others. However, dropping it would mean that the Awareness sub-scale would only contain two items which is not recommended \cite{eisinga2013reliability}. The Awareness sub-scale was therefore excluded from further analysis. The Control and Collection sub-scales had $\alpha$ values of 0.76 and 0.77 respectively and were retained for subsequent cross-analysis. 
+Alpha statistics for all the three sub-scales are available in the Appendix. \ref{control_IUIPC} \ref{collection_IUIPC} \ref{awareness_IUIPC}  
 
 \begin{figure}[htbp]
     \centering
@@ -24,14 +28,14 @@ Since Pearson's correlation assumes normality and only looks for linear relation
     \label{fig:IUIPC correlations}
 \end{figure}
 
-\subsection{Personal Data Sensitivity} \label{Subsec: PD analysis}
+\section{Personal Data Sensitivity} \label{sec: PD analysis}
 
 Along with the common descriptive statistics, Inter Quartile Range (IQR) was also calculated to better explain the spread of the data based on the percentile values. These values can be seen in the table \ref{tab:privacy_statistics}.
 
 
 \begin{table}[h]
 \centering
-\caption{Statistical Summary of Privacy Sensitivity Ratings}
+\caption{Statistical Summary of personal data items} \sa{state the scale and brief description of what this means}
 \label{tab:privacy_statistics}
 \begin{tabular}{lrrrr}
 \toprule
@@ -65,7 +69,7 @@ Medical records and history & 4.382239 & 5 & 0.8829968 & 1.0 \\
 \end{tabular}
 \end{table}
 
-A Friedman rank-sum test was conducted to assess differences in sensitivity ratings across the 23 privacy categories. The test indicated significant differences among categories, $\chi^2(22) = 2564.3$, p < .001. Kendall's coefficient \footnote{Kendall's W measures the effect size by normalizing the value of Friedman's between 0 (no agreement) to 1 (complete agreement)} revealed moderate inter-rater agreement, W = 0.45, $\chi^2(22) = 2564.3$, p < .001. This meant that while participants showed consensus on rankings, items varied individually in terms of their distribution. This is also in alignment with the frequency distribution seen in Figure \ref{fig:Frequency sensitivity}. 
+A Friedman rank-sum test \cite{friedman1937use} was conducted to assess differences in sensitivity ratings across the 23 personal data items. The test indicated significant differences in the perceived privacy sensitivity amongst the different data items, with $\chi^2(22) = 2564.3$, p < .001. Kendall's W \cite{kendall1939problem} \footnote{Kendall's W measures the effect size by normalizing the value of Friedman's between 0 (no agreement) to 1 (complete agreement)} revealed moderate inter-rater agreement at W = 0.45. Together, this meant that the participants did not treat all items as equally sensitive and broadly agreed on which items were more sensitive, although with considerable individual variation in the ordering. This is also in alignment with the frequency distribution seen in Figure \ref{fig:Frequency sensitivity}. 
 
 \begin{figure}[htbp]
     \centering
@@ -74,7 +78,7 @@ A Friedman rank-sum test was conducted to assess differences in sensitivity rati
     \label{fig:Frequency sensitivity}
 \end{figure}
 
-Despite these personal data items initially being considered as a battery, they were clustered to see if there was any possible correlation between the clusters and other sub-scales in the survey. They were grouped together based on how they clustered with one another in their frequency distribution and clustering from previous works. The following groupings were considered:
+Although the 23 personal data items were initially considered individually, they were clustered together to see if there was any possible correlation between these clusters and other sub-scales in the survey. They were grouped together based on their clustering as seen in Figure \ref{fig:Frequency sensitivity}. Additionally, prior works also grouped these personal data items in a similar manner for comparison purposes \cite{priyadarsini_web_2025, kumaraguru_privacy_2012}. These following groups have been considered:
 
 \begin{itemize}
     \item Demographics : Name, Gender, Sexual orientation, Caste, Ethnicity, Religion, Address, Phone number
@@ -84,7 +88,7 @@ Despite these personal data items initially being considered as a battery, they 
     \item Medical : Medical records and history
 \end{itemize}
 
-Upon checking the internal validity using Spearman's correlations and Cronbach's $\alpha$ for each of these groups, it was observed that some of the items ranked very poorly against the others in their respective groups  \ref{fig:corr_demographics}, \ref{fig:corr_financial}, \ref{fig:corr_identity}, and \ref{fig:corr_technical}.  Additionally, Table \ref{tab:Personal data_clustered_alpha} shows that the $\alpha$ values changed substantially when the said items are omitted from the clusters. Therefore in order to ensure validity, \textit{Passwords}, \textit{Photographs}, and \textit{Fingerprints/Biometric information} were considered as individual items and \textit{Phone number} and \textit{Address} were clubbed together as contact group since they correlated well. This segregation ensured ease of comparison and validity in the process while staying true to the correlations.
+Upon checking the internal validity using Spearman's correlations and Cronbach's $\alpha$ for each of these groups, it was observed that some of the items ranked very poorly against the others in their respective groups  \ref{fig:corr_demographics}, \ref{fig:corr_financial}, \ref{fig:corr_identity}, and \ref{fig:corr_technical} \sa{would make sense to mention those items here with values, since going back and forth in the appendix is generally not good}.  Additionally, Table \ref{tab:Personal data_clustered_alpha} shows that the $\alpha$ values changed substantially when the said items are omitted from the clusters. Therefore, in order to ensure validity, \textit{Passwords}, \textit{Photographs}, and \textit{Fingerprints/Biometric information} were considered as individual items and \textit{Phone number} and \textit{Address} were clubbed together as contact group since they correlated well. This segregation ensured ease of comparison and validity in the process while staying true to the correlations.
 
 \begin{table}[htbp]
     \centering
@@ -100,7 +104,7 @@ Upon checking the internal validity using Spearman's correlations and Cronbach's
     \label{tab:Personal data_clustered_alpha}
 \end{table}
 
-To examine the relationships between sensitivities of these groups against the collection and control sub-scales of IUIPC and the \textit{perceived control} value of each participant, Spearman's rank order corelation was calculated. These 27 correlations across the 3 constructs and nine groups (demographic, financial, identity, technical, contact, photographs, fingerprints, passwords, medical) was denoted by Spearman's $\rho$. To control for Type I error inflation from multiple hypothesis testing, p-values were adjusted using the Holm-Bonferroni sequential correction method, which is more powerful than traditional Bonferroni adjustment while maintaining family-wise error rate control. Statistical significance was evaluated at $\alpha$ = 0.05 following Holm-adjustment.
+To examine the relationships between sensitivities of these groups against the aggregated values of IUIPC's Collection and Control alongside the \textit{perceived control} value of each participant \sa{This is from the last section of the survey right? worth mentioning and internally referring it since this is the first time you're using it for analysis}, Spearman's rank order corelation \cite{spearman1904} was calculated. 27 correlations were formed across the 3 aggregate values (IUIPC's Control, IUIPC's Collection and perceived control) and 9 personal data groups (demographic, financial, identity, technical, contact, photographs, fingerprints, passwords, medical) which were denoted by Spearman's $\rho$. To control for Type I error inflation from multiple hypothesis testing, p-values were adjusted using the Holm-Bonferroni sequential correction method, which is more powerful than traditional Bonferroni adjustment while maintaining family-wise error rate control. Statistical significance was evaluated at $\alpha$ = 0.05 following Holm-adjustment.
 
 \subsubsection{Correlation with IUIPC Collection}
 All nine data sensitivity categories showed statistically significant positive associations with IUIPC Collection concerns (all p\_holm < 0.05), ranging from small effects (passwords: $\rho$ = 0.142) to medium effects (technical data: $\rho$ = 0.321; identity documents: $\rho$ = 0.307).
@@ -113,22 +117,22 @@ Similarly, eight of nine categories showed significant positive correlations wit
 
 In contrast to the other two constructs, \textit{Perceived control} demonstrated predominantly negative (inverse) relationships with data sensitivity. Two categories showed significant negative correlations: identity ($\rho$ = -0.203, p\_holm = 0.009) and medical ($\rho$ = -0.194, p\_holm = 0.014). Seven of nine associations were non-significant, with correlations near zero (For example, technical: $\rho$ = -0.019; demographic: $\rho$ = -0.023). 
 
-However, the ceiling effect seen in the IUIPC subscales \ref{fig:IUIPC Frequency} and in several personal data items including \textit{Medical records and history}, \textit{Passport details}, \textit{Passwords}, and \textit{Aadhaar details} \ref{fig:Frequency sensitivity} is a major caveat to be remembered while understanding these values. Coincidentally, the group of personal data items which has a substantial variance across participants is \textit{demographics}, which showcased no significant correlations or only a very small effect size ($\rho$ = 0.184) across the three constructs. The complete correlation information can be seen in the figure \ref{fig:Sensitivity correlation}
+However, the ceiling effect seen in the IUIPC subscales \ref{fig:IUIPC Frequency} and in several personal data items including \textit{Medical records and history}, \textit{Passport details}, \textit{Passwords}, and \textit{Aadhaar details} \ref{fig:Frequency sensitivity} is a major caveat to be remembered while understanding these values. Coincidentally, the group of personal data items which has any notable variance across participants is \textit{demographics}, which either showcased no significant correlation or only a small effect size ($\rho$ < 0.184) across the three constructs. The complete correlation information can be seen in the figure \ref{fig:Sensitivity correlation}
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=1.0\linewidth]{Plots/Sensitivity_correlation_heatmap.png}
     \caption{Spearman correlation coefficients between nine data sensitivity categories 
-and three privacy perception measures. Purple shading indicates positive correlations; 
-pink shading indicates negative correlations. Asterisks denote statistical significance 
+and the constructs. Purple shading indicates positive correlations; 
+pink indicates negative correlations. Asterisks denote statistical significance 
 following Holm-Bonferroni correction (p < 0.05). Technical data and identity documents 
 show the strongest positive associations with collection and control concerns, whereas 
 perceived control demonstrates predominantly negative (non-significant) relationships.}
     \label{fig:Sensitivity correlation}
 \end{figure}
 
-\subsection{Control over processing} \label{Subsec: Perceived control analysis}
-The six items in this section had a noticeably equal and uniform distribution in the responses,inferred from the descriptive statistics \ref{tab:perceived_control_descriptive} and the frequency distribution \ref{fig:Perceived_control_distribution}. This prompted the need to calculate Spearman's inter-item correlation along with Cronbach's $\alpha$ to validate the use of an aggregated value instead of using all the items. The items showed a medium-high correlation with one another as seen in the figure \ref{fig:Percevied_control_correlation} .  Combined with the high $\alpha$ value of 0.86 and Feldt CI range of 0.84 - 0.89, this meant that the scores of these 6 items, could be replaced by a singular aggregate value for each respondent. This singular value is termed as the \textit{Perceived Control} of the users, since these questions explicitly try to understand the users' perceptions of how much control they believe to be having over their Personal Data's processing and the laws which could help them in such situations.
+\section{Control over processing} \label{sec: Perceived control analysis}
+Responses to the six items in this section were distributed similarly across items as seen in Table \ref{tab:perceived_control_descriptive} and Figure \ref{fig:Perceived_control_distribution}. To determine whether these items could be combined into a single aggregate score, Spearman's rank-order correlation \cite{spearman1904} was calculated to understand the monotonic relationships between them. The items showed a moderate to strong correlation (0.36 - 0.70) with one another as shown in Figure \ref{fig:Percevied_control_correlation}. Internal consistency was then assessed using Cronbach's $\alpha$ \cite{cronbach1951coefficient}, which returned a high $\alpha$ value of 0.86 and 95\% Feldt Confidence Interval of 0.84 - 0.89 \cite{feldt1987statistical}. This meant the six items can be combined into a single aggregate value for each respondent. This aggregate value is termed as the \textit{Perceived Control} of the users, as the items collectively understand the users' perceptions of how much control they believe to be having over the processing of their personal data and over the laws intended to help them in such situations.
 
 In order to better understand how the user valued the general control over their personal data and their perceived control of its processing practices, IUIPC's control sub-scale scores of every respondent were aggregated and compared against their \textit{Perceived Control} values. Spearman rank-order correlation was conducted to examine this relationship. A weak, statistically significant negative correlation was found, $\rho$ = -0.18, p = .004, indicating that as IUIPC control increases, perceived control tended to decreases. However, it is to be noted that the previously observed pronounced ceiling effect in IUIPC control plays a significant role in ensuring this result cannot be considered at face-value due to the lack of variance. 
 
@@ -150,7 +154,7 @@ In order to better understand how the user valued the general control over their
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.9\linewidth]{Plots/Perceived_control_correlations.png}
-    \caption{Spearman's correlation matrix of the six control items, with a medium-high correlation overall ranging from 0.36 - 0.70}
+    \caption{Spearman's correlation matrix of the six control items, with a moderate - strong correlation ranging from 0.36 - 0.70}
     \label{fig:Percevied_control_correlation}
 \end{figure}
 
@@ -162,9 +166,11 @@ In order to better understand how the user valued the general control over their
     \label{fig:Perceived_control_distribution}
 \end{figure}
 
-\subsubsection{Demographic Effects} \label{subsubsub:demo effects}
+\subsection{Demographic Effects} \label{subsub:demo effects}
 
-To check if the demographics of the respondents, specifically their \textit{Gender} and \textit{Field of work} showed any variance on personal data sensitivity, Mann Whitney U tests were conducted comparing women versus men and technical versus non-technical sacross the 22 categories. Since the number of sensitivity items meant that the same data had to be run across 23 tests, controlling Type I error inflation from multiple hypothesis testing, p\_values were therefore adjusted using the Holm-Bonferroni sequential correction method, which is more powerful than traditional Bonferroni adjustment while maintaining family-wise error rate control.  Additionally, effect sizes were also calculated using r = Z/$\sqrt{N}$ %(Cohen,88) 
+To ensure demographics weren't overlapping with each other when comparing their effects on various results, cross-tabs \addcite{} were calculated and it was found that ~77\% of the respondents with Technical background \footnote{Technical background comprised of users who marked \textit{Computer Science} and \textit{Maths/Stats/Science} as their field of work} were below the age of 35. For this reason only one of the two was considered while looking at their effects, as effect isolation would not be possible due to the very high overlap\footnote{While primary Regression analysis only considers Gender and Field of work as the indicators, Age was also considered as an indicator and the subsequent effects were calculated to ensure robustness. These Results can be found in the Appendix}\sa{Is there a good reason why you would want to check isolated effects of these two demographics since your data is already skewed towards younger and more educated population?}. Age and Gender cross-tab was also checked, with \textit{Non-binary} (0.4\%) and \textit{prefer not to say} (1.5\%) options being omitted from further comparative effect analysis due to their low count. It was seen that there were only 64\% of the men were having technical backgrounds and the lower overlap meant that the effects could be looked at both as bivariates and individual indicators while isolating one another. \sa{Unclear sentence, try to rephrase and make it more readable e.g., lower overlap with what?}
+
+To check if \textit{Gender} and \textit{Field of work} demographics of the respondents showed any effect on the variance of personal data sensitivity, Mann Whitney U tests were conducted comparing women versus men and technical versus non-technical groups across the 22 categories. To account for Type I error inflation from multiple hypothesis testing (Since the same data had to be run across 23 tests), p\_values were adjusted using the Holm-Bonferroni sequential correction method. This method was chosen as it is stricter than traditional Bonferroni adjustment while maintaining family-wise error rate control. Additionally, effect sizes were also calculated using r = Z/$\sqrt{N}$ %(Cohen,88) 
 to understand how much impact the significant values are having on each item. As shown in Figure \ref{fig:Sensitivity MWU}, both \textit{Gender} and \textit{Field of work} yielded no statistically significant effects after Holm adjustment. Ordinal logistic regression models were also estimated to understand the isolated effects of the demographics, however, none of their coefficients achieved statistical significance after Holm correction (all p\_holm > 0.12).    
 
 \begin{figure} [htbp]
@@ -174,7 +180,14 @@ to understand how much impact the significant values are having on each item. As
     \label{fig:Sensitivity MWU}
 \end{figure}
 
-Similarly, the variance of \textit{Gender} and \textit{Field of work} on the \textit{perceived control} value for each respondent was measured using Mann Whitney U tests as well. In line with the prior comparison to sensitivity, both the demographics yielded no statistically significant effect with p = 0.117 and p = 0.296 respectively \ref{fig:Perceived control MWU}. Linear regression model was estimated to understand the isolated effects on this aggregate value, however, none of them achieved statistical significance (p > 0.12). Both the regression plots are provided in the Appendix for reference purposes.
+Similarly, the effects of \textit{Gender} and \textit{Field of work} on the variance of \textit{perceived control} value for each respondent were measured using Mann Whitney U tests. Like with the previous comparison, both the demographics yielded no statistically significant effects with p = 0.117 and p = 0.296 respectively as seen in Figure \ref{fig:Perceived control MWU}. Linear regression model was estimated to understand the isolated effects on this aggregate value, however, none of them achieved statistical significance (p > 0.12). Both the regression plots are provided in the Appendix for reference purposes.
+
+As an exploratory test, the perceptions of Non-Resident Indians were compared against those currently residing in India, to observe if residency status played any role in their sensitivity and perceived control perceptions. NRIs accounted for 15\% (n=39) of the total sampled population (Table \ref{tab:privacy_statistics}). 
+
+It is important to note that these results cannot be used for any plausible explanations even within this sampled population, due to the small NRI demographic (N=39) and unaccounted factors such as migration history, personal beliefs, and differing regional regulations.
+
+Within this exploratory framework, the NRI sub-sample showed statistical significance for 
+\textit{Medical records and history} (p\_holm = 0.026, r = 0.20) and \textit{Passport details} (p\_holm = 0.014, r = 0.21) on sensitivity measures (Figure \ref{fig:Sensitivity MWU}), though with less-than-medium effect sizes. Additionally, Figure \ref{fig:Perceived control MWU} shows that the domestic respondents expressed higher perceived control than NRIs, with a s statistically significant difference of a small effect size (p = 0.012, r = 0.16). Potential directions for future work building on this discourse are discussed in Section \ref{sec: future work}.
 
 \begin{figure}
     \centering
@@ -184,162 +197,9 @@ Similarly, the variance of \textit{Gender} and \textit{Field of work} on the \te
 \end{figure}
 
 
-\section{Qualitative Analysis} \label{Sec: Qual Analysis}
-
-As discussed in \ref{Subsec: control}, the participants could elaborate on their choices regarding perceived control over personal data processing through optional open-text fields. These were included to capture the nuances arising from this sensitive yet necessary discourse. Post data collection, approximately 100+ responses per item were obtained, with considerable variation in response length and depth. Additionally, the open-text question regarding the Personal Data definition \ref{Subsec: IUIPC} also yielded diverse answers covering various interpretations of constitutes personal data. Upon initial familiarization, many responses demonstrated substantive nuance across multiple topics within this domain. This richness informed the decision to employ Reflexive Thematic Analysis (RTA) for deeper interpretation and theme construction. 
-
-\subsection{Reflexive Thematic Analysis} \label{subsec: Reflexive TA}
-
-Given the researcher's interpretive role throughout the research process in terms of assumptions, from shaping the survey design to theme development during analysis, Reflexive Thematic Analysis aligned with the epistemological commitment to foreground subjectivity as an analytic resource rather than treating it as bias \cite{braun_using_2006, braun_reflecting_2019}. Reflexive TA offers the methodological flexibility that requires the researcher to iteratively think and understand what they're working with, therefore helping their own perspective change and evolve with each iteration. This flexibility combined with the structured six-stage analytic process provides a comprehensive way to understand the patterns within the data and construct themes from them. These six stages are: 
-\begin{enumerate}
-    \item Familiarizing yourself with your data
-    \item Generating initial codes
-    \item Searching for themes
-    \item Reviewing themes
-    \item Defining and naming themes
-    \item Producing the report
-\end{enumerate}
-
-Other methods like Content Analysis or Codebook TA offered methodological rigor similar to Reflexive TA. However, they compromise in terms of accounting for the positionality of the researcher and how it usually impacts analysis. In contrast, this method preserves such nuance while also ensuring that the responses of the participants are not forced into pre-defined categories. 
-
-Additionally, my positionality as a Non-Resident Indian, who resided in the country till the completion of my Bachelor's degree influenced the way I initially understood the context and narrative around the conversation of personal data privacy from a Global South perspective, where the norm for privacy is often from a shared perspective \cite{sambasivan_privacy_nodate}. Furthermore, the lack of awareness around legal jargon creates an atmosphere where the system often offloads the burden of being informed and knowledgeable to the user, thereby forcing them to choose their convenience over privacy. This reflexive thought process was employed during all the phases of conducting this research and is visible in the theme development as well. However, any assumptions made implicitly were documented through memos to maintain provenance.     
-
-\subsection{Analytic Process} \label{subsec:qual analysis}
-
-In order to stay true to Braun and Clarke's approach, the responses for these six control items and the personal data definition were read through twice in a thorough manner to obtain \textbf{familiarity with the data}. Approximately, this consisted of around $\sim$ 800 open-text responses, annotating information that was caught on first glance. Using Atlas.ti, these responses were then sorted and \textbf{coded together initially}, since it was observed that they had many recurring narratives that repeated across items. This process resulted in the generation of 72 codes on the first pass. These codes, along with the reasoning for assigning some of them in a certain manner was noted for accuracy purposes. Additionally, they were also discussed with my supervisors, who have between them have a strong foundational experience of using Reflexive TA. Upon receiving feedback, the codes were revisited individually and either re-worded or even recoded from scratch where necessary. This process ensure the rigor was maintained throughout the coding phase, without losing the nuance mentioned by the participants. This second pass of coding resulted in the generation of 119 codes. 
-
-These set of codes were then sorted into a Miro board for having a broader overview of all the existing information, to help sort it better. In the \textbf{search for suitable themes}, the codes were gathered and sorted together based on their relevancy to the plausible themes that were identified within these codes. The themes were then reviewed against the initial codes and their respective quotations, helping to triangulate this entire process. Each of the identified themes and their subsequent sub-themes were then explicitly \textbf{defined and named} in terms of their scope. These themes and sub-themes were then extensively discussed with my supervisors to ensure clarity and soundness in their alignment. Finally, the entire process was cross-checked, along with the selection of certain relevant quotes for each code and documenting the choices that were made to ensure a sound analytic procedure. 
-
-Two LLM-generated responses were ear-marked under the code ``LLM response'' and omitted from any form of thematic analysis, to ensure the perspectives were kept human and their quality maintained. Similarly, responses which were in plain binary agreement or disagreement across all the questions were marked separately but left out of theme building since they do not contribute in a meaningful way. Responses (n=8) which were repeated by the same users across multiple questions, were only considered once while the rest were marked as duplicate and omitted. Finally, responses like `No reason', `Same as before', `NA' and repetition of the question statement were also marked and omitted since they do not contribute to the quality of the analysis in a meaningful manner. 
-
-Since the personal data question required the users to name some items which they think falls into this category, such list of items mentioned across each response was marked as a bucket code to ensure the nuance present in the rest of the response wasn't lost and the codebook was not filled up with just names of the various personal data items. Since this bucket code was present for every response of the personal data question, it is considered as a supportive pillar while creating the theme around these codes.
-
-\subsection{Themes} \label{subsec: themes}
-
-Upon segregation, there are 4 themes which have been identified from the responses of the users, with each having sub-themes to further explain the various nuanced perspectives. The consolidated list of all the themes and their sub-themes along with a brief explanation and example quotations is as follows:
-
-\begin{enumerate}
-    \item \textbf{What makes `Data' personal?}: \textit{This theme focuses on the user definition of their Personal data, how they use and create such data along with their explanation of how must it be used or accessed by others}
-    \begin{enumerate}
-        \item \textbf{Identity focused information}: Sub-theme primarily captures the interdependence of user with their identity, along with the intricacy of understanding person - data relationship. In relation to this, users also point out that this identification can be both direct or indirect in its nature, while such data always needing or having privacy and security
-        \begin{quote}
-            ``Any data that represents my identity or belong to me''
-        \end{quote}
-        \begin{quote}
-            ``Any personally identifiable information, including health information that can trace me or my family's identity''
-        \end{quote}
-        \item \textbf{User-originated attributes}: This sub-theme explains the users opinions on how data is basically something they generate hence describing them uniquely. Due to such uniqueness, some users also claim that the companies use this data to build a digital profile of their identity of tracking or advertising purposes
-        \begin{quote}
-            ``Anything which gives away any key unique trait/identification/interests of mine''
-        \end{quote}\
-        \begin{quote}
-            ``Any data generated by me that can be used to influence my behaviour''
-        \end{quote}
-        \item \textbf{Information exclusivity}: Focus on the importance of users' consent, their perspectives about not sharing such data with anyone and selective access. In a slight contradiction, some users also talk about their willingness to share such data with others, with the caveat of their choice still being present nonetheless
-        \begin{quote}
-            ``Its a confidental data which shouldn't be visible to others without the owner consent.''
-        \end{quote}
-        \begin{quote}
-            ``Anything that belongs to me is personal. Until I deliberately choose it to be public.''
-        \end{quote}
-    \end{enumerate}
-    
-    \item \textbf{Deficits in privacy agency and awareness}: \textit{This theme discusses about user pitfalls with respect to processing practices including their lack of awareness about such practices while not having sufficient information being provided by the companies which reduces transparency. All this leads to the users showcasing mixed feelings of overall trust, primarily leaning towards corporate distrust} \label{theme:T2}
-    \begin{enumerate}
-        \item \textbf{Agency constraints and powerlessness}: This sub-themes deals with the various the fears of the users in terms of their social standing against the companies stemming from confusion, data misuse, presence of AI, and lack of choice and control. While some users echo their right to have control over data, a few also contradict by talking about their existing control and how this benefits them due to the personalized content. Many of the users also recollect their personal experiences of advertising and data malpractices which lead to possible cyber crimes
-        \begin{quote}
-            ``Generally I get recommendations and I don't know how they know it''
-        \end{quote}
-        \begin{quote}
-             ``I didn't want to become victim of cyber crime , abuse because of my opinions , don't want them to track my movements, calls me on birthday and asking for donations , morphing photos , getting loans my using my details.''
-        \end{quote}
-        \begin{quote}
-             ``I didn't want to become victim of cyber crime , abuse because of my opinions , don't want them to track my movements, calls me on birthday and asking for donations , morphing photos , getting loans my using my details.''
-        \end{quote}
-        \item \textbf{Process transparency and information access}: Describes the plight of users about their awareness and knowledge gaps, denial of information, and lack of transparency about these processes by the companies. Few users however do talk about consent revocation specifically being quick and easy, especially due to their usage of automated tools
-        \begin{quote}
-            ``If there are multiple stakeholders who own/share access to the data, the removal process is complex and could have mistakes''
-        \end{quote}
-        \begin{quote}
-            ``Not that at all easy, first not much awareness that one can withdraw and also not easy to find the procedure to withdraw''
-        \end{quote}
-        \begin{quote}
-            ``In the past, I have requested my personal data to be deleted with my account when I no longer use the service (ex: food delivery apps, job application sites). The process gas been quick and simple.''
-        \end{quote}
-        \item \textbf{Post-hoc confirmation challenges}: Deals with users talking about not receiving any valid and believable confirmation primarily related to their consent withdrawal and deletion of their data. Claims of an illusion of deletion being created by the companies are made mainly because the data will always exist on the cloud and their servers
-        \begin{quote}
-            ``There are features to whitdraw but I don’t know if they actually do it or not''
-        \end{quote}
-        \begin{quote}    
-            ``Because I am not sure that if they comply and remove my data, what if it has already been stored in third party servers and cannot be erased from there.''
-        \end{quote}
-        \item \textbf{Contingent trust}: This sub-theme focuses on the conditionality of user's trust about these processes and more importantly about the companies. Some of the users however, explicitly talk about them making decisions on their own, which often leads to them conditionally trusting the companies and their process.
-        \begin{quote}
-            ``I think companies hide a lot behind their fine print on how they use and process data and I'm not fully informed''
-            ``I believe most reputable websites and applications provide privacy notices, consent requests, or terms and conditions explaining how my personal data will be collected and processed. I make an effort to review these notices, especially when sharing sensitive information, although I understand that the level of detail and transparency may vary between organizations.''
-        \end{quote}
-    \end{enumerate}
-    
-    \item \textbf{Corporate opacity and accountability gaps}: \textit{This theme describes the various practices by the companies which are aimed to deceive the user and the law in order to make profits. Furthermore users also talk about companies and their influence peddling to ensure non-compliance}
-    \begin{enumerate}
-        \item \textbf{Asymmetric information disclosure}: This sub-theme describes the users perceptions about information non-disclosure by the companies in addition to their unconsenting data processing practices. Some users do claim that while they are fully informed by the companies in their privacy policies, they are still skeptical about valid implementation
-        \begin{quote}
-            ``I get a disclaimer that my data is going to be used but i don't get a reason or justification as to where it is being used and when''
-        \end{quote}
-        \begin{quote}
-            ``Even though there are disclaimers on the data usage, there is no mechanism to know if it is followed.''
-        \end{quote}
-        \item \textbf{Manipulative design}: Dark patterns described by the users which are employed by these companies with the intent to misguide, often also resulting in the users skipping the documentation
-        \begin{quote}
-            ``Companies usually make it super hard to withdraw consent by hiding/fine printing info as to how to go about it so users lose interest''
-        \end{quote}
-        \begin{quote}
-            ``Signup is often one click but try deleteing any account and count your number of clicks'' 
-        \end{quote}
-        \item \textbf{Corporate evasion and greed}: Users discuss the ways companies evade legal compliance, stemming from their lack of accountability and their monetary end-goals. They extensively discuss psuedo-compliance using real-world instances of such situations
-        \begin{quote}
-            ``It is not beneficial for companies,to alert the customer,as usually people don't trust multi national conglomerates, so they do legally so but in a way,that people don't immediately grasp the importance and just give in, without going through all that information...I hold the notion of personal marketting to lowest esteem, because it makes me feel constantly perceived,and gives an air of declining privacy of mine''
-        \end{quote}
-        \begin{quote}
-            ``Aadhar details of 800million people got leaked. Who really gives a fuck in India. There's no recourse for private leaks as well''
-        \end{quote}
-        \begin{quote}
-            ``Although many companies claim to follow data protection laws, I am not always confident that they fully comply with them in practice. News reports about data breaches, privacy concerns, and the misuse of personal information by large technology companies have made me more cautious. While some organizations likely take these laws seriously, I believe others may focus more on appearing compliant than on consistently protecting users’ personal data. ''
-        \end{quote}
-    \end{enumerate}
-
-    \item \textbf{Structural Governance shortcomings}: \textit{This theme explores the various hiccups in the legal processes for the users ranging from lack of awareness, procedural hassles not being worth it and primarily, enforcement gaps. Users also hope for a change and improvement in these shortcomings}
-    \begin{enumerate}
-        \item \textbf{Epistemic legal uncertainty}: This sub-theme deals with conditional awareness, knowledge, and confidence of the users about the various laws. Even the users who claim to have knowledge, mention about their skepticism towards the effectiveness of such laws. However, few users show belief in the existing legal systems, instead expressing doubts on the companies and their compliance
-        \begin{quote}
-            ``I don't think there's that much awareness Laws don't get implemented so easily''
-        \end{quote}
-        \begin{quote}
-            ``There are obviously laws but I dont know the effectiveness since laws vary from country to country and an individual cant know laws of all the various countries and it often do happens you data is sold not only within your country but also out of the country to various data brokers.''
-        \end{quote}
-        \item \textbf{Enforcement barriers}: Conditionality is further extended towards the distrust in the enforcement procedures either due to organizational noncompliance or lack of transparency. Users believe that the hassles involved in fighting against these giant corporations only amplifies their distrust on both the companies and the legal procedure itself
-        \begin{quote}
-            ``I believe many organizations strive to comply with data protection laws, but the level of compliance can vary depending on the organization's size, industry, and commitment to privacy. Without transparency or independent verification, it is difficult to be certain.''
-        \end{quote}
-        \begin{quote}
-            ``I believe legislation still needs to catch up to the developments and practices of tech companies. Also, legal recourse for an average member of the public can be prohibitively expensive in a country where justice is not always delivered in a timely manner.''
-        \end{quote}
-        \item \textbf{Wishful reforms}: Users acknowledge the need for better legal procedures, increased awareness and improvement in the overall legal implementation
-        \begin{quote}
-            ``Enforcement in a defined timeline is a must which I feel we are lacking''
-        \end{quote}
-        \begin{quote}
-            ``Even if there are, people are not aware of such laws. People should be educated in such laws''
-        \end{quote}
-    \end{enumerate}
-\end{enumerate}
-
-The overlap between these themes, especially how despite high sensitivity perceptions, corporate opacity contributes to agency deficits within the context of regulatory permissiveness, is explored as interconnected pathways in Section \ref{chapter:discussion}, alongside the quantitative results to address the research questions \ref{rq:1} \ref{rq:2} in a broader analytical manner. 
-
 \section{Digital Personal Data Protection Act (DPDPA)}\label{sec:DPDPA analysis}
 
-As described in \ref{Subsubsec: DPDPA}, the questions related to this Act comprised of both quantitative and qualitative aspects. Initially, responses were analyzed in a simple descriptive manner by aggregating the number of participants who answered each question as shown in table \ref{tab:dpdpa-awareness}. If the open-text responses were answered for the respective questions, this data was coded and analyzed in simple descriptive summarization manner to ensure the codes stayed as close to the original data as possible. These results and their subsequent descriptive interpretation is discussed further in Section \ref{DPDPA discussion}. 
-
+As described in Section \ref{Subsubsec: DPDPA}, the questions related to this Act comprised of both quantitative and qualitative aspects. Responses were initially analyzed in a simple descriptive manner by aggregating the number of participants who answered each question as shown in Table \ref{tab:dpdpa-awareness}. For the open-text of the respective questions, data is presented in a simple descriptive summarization to ensure the codes stayed as close to the original responses as possible. As seen in Table \ref{tab:dpdpa-awareness}, only 21\% of the respondents explicitly state that they are having knowledge about the Act and its purposes. More than half of them (52\%) additionally state that they are either not sure or do not think that the implementation of this Act would help in safeguarding their personal data data privacy. Sentiments of partial effectiveness (n=10), distrust in enforcement procedures (n=7), lack of trust in government (n=6) were echoed in detail as part of the open-text responses, mirroring emotions displayed in the rest of the survey. Further descriptive interpretation as part of the broader context of procedural distrust and illusion over users' control is discussed in Section \ref{DPDPA discussion}. 
 
 \begin{table}[htbp]
     \centering
@@ -362,4 +222,5 @@ As described in \ref{Subsubsec: DPDPA}, the questions related to this Act compri
     \caption{DPDPA Awareness and Privacy beliefs}
     \label{tab:dpdpa-awareness}
 \end{table}
+
 
